@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
 
 @interface Amble : NSObject
+
+@property (nonatomic,strong) RACSignal* signal;
 
 @end

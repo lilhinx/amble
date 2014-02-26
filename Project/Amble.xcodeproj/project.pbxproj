@@ -16,10 +16,37 @@
 		9C6BE45C18BD66E10041DB89 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C6BE45A18BD66E10041DB89 /* InfoPlist.strings */; };
 		9C6BE45E18BD66E10041DB89 /* AmbleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6BE45D18BD66E10041DB89 /* AmbleTests.m */; };
 		9C6BE46B18BD66F20041DB89 /* Amble.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C6BE46A18BD66F20041DB89 /* Amble.m */; };
+		9C833F5818BD6A0300515E81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6BE44118BD66E10041DB89 /* Foundation.framework */; };
+		9C833F5A18BD6A0300515E81 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C833F5918BD6A0300515E81 /* CoreGraphics.framework */; };
+		9C833F5B18BD6A0300515E81 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6BE45218BD66E10041DB89 /* UIKit.framework */; };
+		9C833F6118BD6A0300515E81 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C833F5F18BD6A0300515E81 /* InfoPlist.strings */; };
+		9C833F6318BD6A0300515E81 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C833F6218BD6A0300515E81 /* main.m */; };
+		9C833F6718BD6A0300515E81 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C833F6618BD6A0300515E81 /* AppDelegate.m */; };
+		9C833F6918BD6A0300515E81 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C833F6818BD6A0300515E81 /* Images.xcassets */; };
+		9C833F6F18BD6A0300515E81 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6BE44F18BD66E10041DB89 /* XCTest.framework */; };
+		9C833F7018BD6A0300515E81 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6BE44118BD66E10041DB89 /* Foundation.framework */; };
+		9C833F7118BD6A0300515E81 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6BE45218BD66E10041DB89 /* UIKit.framework */; };
+		9C833F7918BD6A0300515E81 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C833F7718BD6A0300515E81 /* InfoPlist.strings */; };
+		9C833F7B18BD6A0300515E81 /* AmbleDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C833F7A18BD6A0300515E81 /* AmbleDemoTests.m */; };
+		9C833F8418BD6A4300515E81 /* libAmble.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C6BE43E18BD66E10041DB89 /* libAmble.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		9C6BE45418BD66E10041DB89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C6BE43618BD66E10041DB89 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C6BE43D18BD66E10041DB89;
+			remoteInfo = Amble;
+		};
+		9C833F7218BD6A0300515E81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9C6BE43618BD66E10041DB89 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9C833F5618BD6A0300515E81;
+			remoteInfo = AmbleDemo;
+		};
+		9C833F8218BD6A3900515E81 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9C6BE43618BD66E10041DB89 /* Project object */;
 			proxyType = 1;
@@ -53,6 +80,19 @@
 		9C6BE45D18BD66E10041DB89 /* AmbleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AmbleTests.m; sourceTree = "<group>"; };
 		9C6BE46918BD66F20041DB89 /* Amble.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Amble.h; sourceTree = "<group>"; };
 		9C6BE46A18BD66F20041DB89 /* Amble.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Amble.m; sourceTree = "<group>"; };
+		9C833F5718BD6A0300515E81 /* AmbleDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmbleDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C833F5918BD6A0300515E81 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		9C833F5E18BD6A0300515E81 /* AmbleDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AmbleDemo-Info.plist"; sourceTree = "<group>"; };
+		9C833F6018BD6A0300515E81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9C833F6218BD6A0300515E81 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		9C833F6418BD6A0300515E81 /* AmbleDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AmbleDemo-Prefix.pch"; sourceTree = "<group>"; };
+		9C833F6518BD6A0300515E81 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		9C833F6618BD6A0300515E81 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		9C833F6818BD6A0300515E81 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		9C833F6E18BD6A0300515E81 /* AmbleDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmbleDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C833F7618BD6A0300515E81 /* AmbleDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "AmbleDemoTests-Info.plist"; sourceTree = "<group>"; };
+		9C833F7818BD6A0300515E81 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		9C833F7A18BD6A0300515E81 /* AmbleDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AmbleDemoTests.m; sourceTree = "<group>"; };
 		B9408AEB8BE04FCF9FE14BBF /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -77,6 +117,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9C833F5418BD6A0300515E81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C833F8418BD6A4300515E81 /* libAmble.a in Frameworks */,
+				9C833F5A18BD6A0300515E81 /* CoreGraphics.framework in Frameworks */,
+				9C833F5B18BD6A0300515E81 /* UIKit.framework in Frameworks */,
+				9C833F5818BD6A0300515E81 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C833F6B18BD6A0300515E81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C833F6F18BD6A0300515E81 /* XCTest.framework in Frameworks */,
+				9C833F7118BD6A0300515E81 /* UIKit.framework in Frameworks */,
+				9C833F7018BD6A0300515E81 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -86,6 +147,8 @@
 				9C6BE46718BD66F20041DB89 /* Classes */,
 				9C6BE44418BD66E10041DB89 /* Supporting Files */,
 				9C6BE45718BD66E10041DB89 /* AmbleTests */,
+				9C833F5C18BD6A0300515E81 /* AmbleDemo */,
+				9C833F7418BD6A0300515E81 /* AmbleDemoTests */,
 				9C6BE44018BD66E10041DB89 /* Frameworks */,
 				9C6BE43F18BD66E10041DB89 /* Products */,
 				21C831ECC4C94D689F363D30 /* Pods.xcconfig */,
@@ -97,6 +160,8 @@
 			children = (
 				9C6BE43E18BD66E10041DB89 /* libAmble.a */,
 				9C6BE44E18BD66E10041DB89 /* AmbleTests.xctest */,
+				9C833F5718BD6A0300515E81 /* AmbleDemo.app */,
+				9C833F6E18BD6A0300515E81 /* AmbleDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -108,6 +173,7 @@
 				9C6BE44F18BD66E10041DB89 /* XCTest.framework */,
 				9C6BE45218BD66E10041DB89 /* UIKit.framework */,
 				B9408AEB8BE04FCF9FE14BBF /* libPods.a */,
+				9C833F5918BD6A0300515E81 /* CoreGraphics.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -147,6 +213,46 @@
 			);
 			name = Classes;
 			path = ../Classes/ios;
+			sourceTree = "<group>";
+		};
+		9C833F5C18BD6A0300515E81 /* AmbleDemo */ = {
+			isa = PBXGroup;
+			children = (
+				9C833F6518BD6A0300515E81 /* AppDelegate.h */,
+				9C833F6618BD6A0300515E81 /* AppDelegate.m */,
+				9C833F6818BD6A0300515E81 /* Images.xcassets */,
+				9C833F5D18BD6A0300515E81 /* Supporting Files */,
+			);
+			path = AmbleDemo;
+			sourceTree = "<group>";
+		};
+		9C833F5D18BD6A0300515E81 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C833F5E18BD6A0300515E81 /* AmbleDemo-Info.plist */,
+				9C833F5F18BD6A0300515E81 /* InfoPlist.strings */,
+				9C833F6218BD6A0300515E81 /* main.m */,
+				9C833F6418BD6A0300515E81 /* AmbleDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9C833F7418BD6A0300515E81 /* AmbleDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				9C833F7A18BD6A0300515E81 /* AmbleDemoTests.m */,
+				9C833F7518BD6A0300515E81 /* Supporting Files */,
+			);
+			path = AmbleDemoTests;
+			sourceTree = "<group>";
+		};
+		9C833F7518BD6A0300515E81 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				9C833F7618BD6A0300515E81 /* AmbleDemoTests-Info.plist */,
+				9C833F7718BD6A0300515E81 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +295,42 @@
 			productReference = 9C6BE44E18BD66E10041DB89 /* AmbleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		9C833F5618BD6A0300515E81 /* AmbleDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C833F8018BD6A0300515E81 /* Build configuration list for PBXNativeTarget "AmbleDemo" */;
+			buildPhases = (
+				9C833F5318BD6A0300515E81 /* Sources */,
+				9C833F5418BD6A0300515E81 /* Frameworks */,
+				9C833F5518BD6A0300515E81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C833F8318BD6A3900515E81 /* PBXTargetDependency */,
+			);
+			name = AmbleDemo;
+			productName = AmbleDemo;
+			productReference = 9C833F5718BD6A0300515E81 /* AmbleDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9C833F6D18BD6A0300515E81 /* AmbleDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9C833F8118BD6A0300515E81 /* Build configuration list for PBXNativeTarget "AmbleDemoTests" */;
+			buildPhases = (
+				9C833F6A18BD6A0300515E81 /* Sources */,
+				9C833F6B18BD6A0300515E81 /* Frameworks */,
+				9C833F6C18BD6A0300515E81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9C833F7318BD6A0300515E81 /* PBXTargetDependency */,
+			);
+			name = AmbleDemoTests;
+			productName = AmbleDemoTests;
+			productReference = 9C833F6E18BD6A0300515E81 /* AmbleDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,6 +339,14 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Chris Hinkle";
+				TargetAttributes = {
+					9C6BE44D18BD66E10041DB89 = {
+						TestTargetID = 9C833F5618BD6A0300515E81;
+					};
+					9C833F6D18BD6A0300515E81 = {
+						TestTargetID = 9C833F5618BD6A0300515E81;
+					};
+				};
 			};
 			buildConfigurationList = 9C6BE43918BD66E10041DB89 /* Build configuration list for PBXProject "Amble" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -212,6 +362,8 @@
 			targets = (
 				9C6BE43D18BD66E10041DB89 /* Amble */,
 				9C6BE44D18BD66E10041DB89 /* AmbleTests */,
+				9C833F5618BD6A0300515E81 /* AmbleDemo */,
+				9C833F6D18BD6A0300515E81 /* AmbleDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -222,6 +374,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C6BE45C18BD66E10041DB89 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C833F5518BD6A0300515E81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C833F6118BD6A0300515E81 /* InfoPlist.strings in Resources */,
+				9C833F6918BD6A0300515E81 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C833F6C18BD6A0300515E81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C833F7918BD6A0300515E81 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +446,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9C833F5318BD6A0300515E81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C833F6718BD6A0300515E81 /* AppDelegate.m in Sources */,
+				9C833F6318BD6A0300515E81 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C833F6A18BD6A0300515E81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9C833F7B18BD6A0300515E81 /* AmbleDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -285,6 +471,16 @@
 			target = 9C6BE43D18BD66E10041DB89 /* Amble */;
 			targetProxy = 9C6BE45418BD66E10041DB89 /* PBXContainerItemProxy */;
 		};
+		9C833F7318BD6A0300515E81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C833F5618BD6A0300515E81 /* AmbleDemo */;
+			targetProxy = 9C833F7218BD6A0300515E81 /* PBXContainerItemProxy */;
+		};
+		9C833F8318BD6A3900515E81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9C6BE43D18BD66E10041DB89 /* Amble */;
+			targetProxy = 9C833F8218BD6A3900515E81 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
@@ -292,6 +488,22 @@
 			isa = PBXVariantGroup;
 			children = (
 				9C6BE45B18BD66E10041DB89 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9C833F5F18BD6A0300515E81 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C833F6018BD6A0300515E81 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		9C833F7718BD6A0300515E81 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C833F7818BD6A0300515E81 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -399,6 +611,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AmbleDemo.app/AmbleDemo";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -412,6 +625,7 @@
 				);
 				INFOPLIST_FILE = "AmbleTests/AmbleTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Debug;
@@ -420,6 +634,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AmbleDemo.app/AmbleDemo";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -429,6 +644,95 @@
 				GCC_PREFIX_HEADER = "Amble/Amble-Prefix.pch";
 				INFOPLIST_FILE = "AmbleTests/AmbleTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+		9C833F7C18BD6A0300515E81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21C831ECC4C94D689F363D30 /* Pods.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AmbleDemo/AmbleDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AmbleDemo/AmbleDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		9C833F7D18BD6A0300515E81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21C831ECC4C94D689F363D30 /* Pods.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AmbleDemo/AmbleDemo-Prefix.pch";
+				INFOPLIST_FILE = "AmbleDemo/AmbleDemo-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		9C833F7E18BD6A0300515E81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AmbleDemo.app/AmbleDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AmbleDemo/AmbleDemo-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "AmbleDemoTests/AmbleDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		9C833F7F18BD6A0300515E81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/AmbleDemo.app/AmbleDemo";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "AmbleDemo/AmbleDemo-Prefix.pch";
+				INFOPLIST_FILE = "AmbleDemoTests/AmbleDemoTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
 			name = Release;
@@ -462,6 +766,22 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		9C833F8018BD6A0300515E81 /* Build configuration list for PBXNativeTarget "AmbleDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C833F7C18BD6A0300515E81 /* Debug */,
+				9C833F7D18BD6A0300515E81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		9C833F8118BD6A0300515E81 /* Build configuration list for PBXNativeTarget "AmbleDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9C833F7E18BD6A0300515E81 /* Debug */,
+				9C833F7F18BD6A0300515E81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
