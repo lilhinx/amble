@@ -1,0 +1,22 @@
+PODS:
+  - Amble (0.1.0):
+    - ReactiveCocoa (~> 2.2.4)
+  - ReactiveCocoa (2.2.4):
+    - ReactiveCocoa/Core
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/Core (2.2.4):
+    - ReactiveCocoa/no-arc
+  - ReactiveCocoa/no-arc (2.2.4)
+
+DEPENDENCIES:
+  - Amble (from `../Amble.podspec`)
+
+EXTERNAL SOURCES:
+  Amble:
+    :path: ../Amble.podspec
+
+SPEC CHECKSUMS:
+  Amble: 050be13f76114429547204791c5e66162dfe725a
+  ReactiveCocoa: 953a45dda30674fe704d1d9c77cc874141742f47
+
+COCOAPODS: 0.29.0
