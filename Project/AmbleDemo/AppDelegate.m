@@ -16,6 +16,12 @@
     Amble* amble = [[Amble alloc] init];
     NSLog( @"signal: %@", amble.signal );
     
+    amble.manager = [[CLLocationManager alloc] init];
+    NSLog( @"manager: %@", amble.manager );
+    
+    amble.motionManager = [[CMMotionManager alloc] init];
+    NSLog( @"motionManager: %@", amble.motionManager );
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];

@@ -8,9 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import <CoreLocation/CoreLocation.h>
+#import <CoreMotion/CoreMotion.h>
 
 @interface Amble : NSObject
 
 @property (nonatomic,strong) RACSignal* signal;
+@property (nonatomic,strong) CLLocationManager* manager;
+@property (nonatomic,strong) CMMotionManager* motionManager;
+
 
 @end
