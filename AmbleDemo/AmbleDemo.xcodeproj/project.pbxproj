@@ -20,6 +20,8 @@
 		9C9794B218BEC62400E8C685 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 9C9794B018BEC62400E8C685 /* InfoPlist.strings */; };
 		9C9794B418BEC62400E8C685 /* AmbleDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9794B318BEC62400E8C685 /* AmbleDemoTests.m */; };
 		9C9794BE18BEC63D00E8C685 /* libAmble.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9794BD18BEC63D00E8C685 /* libAmble.a */; };
+		9C9794C518BED1BF00E8C685 /* Storyboard_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C9794C418BED1BF00E8C685 /* Storyboard_iPhone.storyboard */; };
+		9C9794C818BED20200E8C685 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9794C718BED20200E8C685 /* ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,9 @@
 		9C9794B118BEC62400E8C685 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9C9794B318BEC62400E8C685 /* AmbleDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AmbleDemoTests.m; sourceTree = "<group>"; };
 		9C9794BD18BEC63D00E8C685 /* libAmble.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libAmble.a; path = "../../../Library/Developer/Xcode/DerivedData/Amble-cefvttoebwjxftfabsyggsfgceoa/Build/Products/Debug-iphoneos/libAmble.a"; sourceTree = "<group>"; };
+		9C9794C418BED1BF00E8C685 /* Storyboard_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard_iPhone.storyboard; sourceTree = "<group>"; };
+		9C9794C618BED20200E8C685 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		9C9794C718BED20200E8C685 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +120,9 @@
 				9C97949E18BEC62400E8C685 /* AppDelegate.m */,
 				9C9794A018BEC62400E8C685 /* Images.xcassets */,
 				9C97949518BEC62400E8C685 /* Supporting Files */,
+				9C9794C418BED1BF00E8C685 /* Storyboard_iPhone.storyboard */,
+				9C9794C618BED20200E8C685 /* ViewController.h */,
+				9C9794C718BED20200E8C685 /* ViewController.m */,
 			);
 			path = AmbleDemo;
 			sourceTree = "<group>";
@@ -224,6 +232,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C97949918BEC62400E8C685 /* InfoPlist.strings in Resources */,
+				9C9794C518BED1BF00E8C685 /* Storyboard_iPhone.storyboard in Resources */,
 				9C9794A118BEC62400E8C685 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -243,6 +252,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C9794C818BED20200E8C685 /* ViewController.m in Sources */,
 				9C97949F18BEC62400E8C685 /* AppDelegate.m in Sources */,
 				9C97949B18BEC62400E8C685 /* main.m in Sources */,
 			);
