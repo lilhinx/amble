@@ -9,7 +9,7 @@
 #import "Amble+Ambulation.h"
 #import <CoreMotion/CoreMotion.h>
 
-#define TRACK_STEPS 10
+#define TRACK_STEPS 5
 #define STEP_TIMER_INTERVAL 5.0
 
 @implementation AmbleStepsMessage
@@ -25,6 +25,7 @@
 
 @property (nonatomic,strong) RACSubject* stepsSubject;
 @property (nonatomic,strong) RACSubject* walkingSpeedSubject;
+@property (nonatomic,strong) RACSignal* ambulatorySignal;
 
 - (void)startTracking;
 - (void)stopTracking;
@@ -68,9 +69,6 @@
         {
             [self.stepsSubject sendError:error];
         }
-        
-         
-         
          
          AmbleStepsMessage* msg = [[AmbleStepsMessage alloc] init];
          msg.steps = @(numberOfSteps);
@@ -86,10 +84,14 @@
          self.lastStepMessage = msg;
          
          [self.stepsSubject sendNext:msg];
+		 
+		 
     }];
+	
+	[self.stepTimer invalidate];
+	self.stepTimer = [NSTimer scheduledTimerWithTimeInterval:STEP_TIMER_INTERVAL target:self selector:@selector(stepTimer_fire:) userInfo:nil repeats:YES];
     
-    [self.stepTimer invalidate];
-    self.stepTimer = [NSTimer scheduledTimerWithTimeInterval:STEP_TIMER_INTERVAL target:self selector:@selector(stepTimer_fire:) userInfo:nil repeats:YES];
+    
 }
 
 - (void)stopTracking
@@ -119,9 +121,50 @@
     return _walkingSpeedSubject;
 }
 
+- (RACSignal*)ambulatorySignal
+{
+	if( _ambulatorySignal == nil )
+	{
+		_ambulatorySignal = (RACSignal*)[[[AmbulationManager sharedManager] walkingSpeedSubject] map:^NSNumber*( NSNumber* speed )
+		{
+			if( speed.floatValue > 0 )
+			{
+				return @(YES);
+			}
+			else
+			{
+				return @(NO);
+			}
+		}];
+	}
+	
+	return _ambulatorySignal;
+}
+
+
+
 - (void)stepTimer_fire:(NSTimer*)timer
 {
-    
+	if( self.lastStepMessage )
+	{
+		NSTimeInterval elapsed = [self.lastStepMessage.timestamp timeIntervalSinceNow];
+		if( fabs( elapsed ) > ( STEP_TIMER_INTERVAL * 1.0 ) )
+		{
+			NSDate* now = [NSDate date];
+			[self.stepCounter queryStepCountStartingFrom:self.lastStepMessage.timestamp to:now toQueue:self.stepCounterQueue withHandler:^(NSInteger numberOfSteps, NSError *error)
+			{
+				AmbleStepsMessage* msg = [[AmbleStepsMessage alloc] init];
+				msg.steps = @(numberOfSteps);
+				msg.timestamp = now;
+				self.lastStepMessage = msg;
+				
+				if( numberOfSteps == 0 )
+				{
+					[self.walkingSpeedSubject sendNext:@(0)];
+				}
+			}];
+		}
+	}
 }
 
 
@@ -150,7 +193,7 @@
 + (RACSignal*)isAmbulatory
 {
     [Amble startStepsTracker];
-    return nil;
+    return [[AmbulationManager sharedManager] ambulatorySignal];
 }
 
 + (RACSignal*)steps
