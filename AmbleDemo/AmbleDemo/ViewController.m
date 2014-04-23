@@ -9,6 +9,9 @@
 #import "ViewController.h"
 #import "Amble.h"
 #import "Amble+Ambulation.h"
+#import "AmbleLocationManager.h"
+#import "TSMessage.h"
+
 
 @interface MotiveIconButtonView : UIButton
 
@@ -101,35 +104,35 @@
 
 @implementation ViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
+
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
-//    
-//	[[Amble steps] subscribeNext:^( AmbleStepsMessage* msg ) {
-//       
-//        NSString* msgDisplay = [NSString stringWithFormat:@"%@\n", msg.steps];
-//        self.textView.text = [self.textView.text stringByAppendingString:msgDisplay];
-//		
-//    }];
-//    
-//    [[Amble walkingSpeed] subscribeNext:^( NSNumber* speed )
-//    {
-//        NSString* msgDisplay = [NSString stringWithFormat:@"speed %@\n", speed];
-//        self.textView.text = [self.textView.text stringByAppendingString:msgDisplay];
-//    }];
-	
+	[super viewDidLoad];
+	[TSMessage setDefaultViewController:self];
+	[TSMessage addCustomDesignFromFileWithName:@"TSMessagesDefaultDesign.json"];
 	self.motiveItem = [MotiveIconButtonItem icon];
 	RAC(self.motiveItem, showWalkIcon ) = [Amble isAmbulatory];
 	self.toolbarItems = @[self.motiveItem];
+	
+	
+	
+	
+	
+	[[[AmbleLocationManager sharedManager] currentAuthorizationStatus_humanReadable] subscribeNext:^(NSString* status ) {
+		[TSMessage showNotificationWithTitle:@"Location Services Authorization"
+							   subtitle:status
+								  type:TSMessageNotificationTypeMessage];
+	}];
+	
+	
+	[[[AmbleLocationManager sharedManager] currentLocation] subscribeNext:^( CLLocation* location ) {
+		[self.mapView setCenterCoordinate:location.coordinate animated:YES];
+	}];
+	
+	[[AmbleLocationManager sharedManager] startUpdatingLocation];
+	
+	
 }
 
 - (void)didReceiveMemoryWarning

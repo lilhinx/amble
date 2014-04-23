@@ -1,3 +1,6 @@
 [submodule "ReactiveCocoa"]
 	path = ReactiveCocoa
 	url = https://github.com/ReactiveCocoa/ReactiveCocoa.git
+[submodule "TSMessages"]
+	path = TSMessages
+	url = https://github.com/toursprung/TSMessages.git
