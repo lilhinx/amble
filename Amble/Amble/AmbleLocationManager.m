@@ -111,6 +111,10 @@
 	//filtering for only chronologically ascending location values
 	__weak typeof(self) weakSelf = self;
 	return (RACSignal*)[self.locationSubject filter:^BOOL( CLLocation* locationValue ) {
+		if( locationValue == nil )
+		{
+			return NO;
+		}
 		NSComparisonResult rslt = [locationValue.timestamp compare:weakSelf.lastLocationTime];
 		BOOL isLatest = rslt == NSOrderedSame || rslt == NSOrderedDescending;
 		if( isLatest )
