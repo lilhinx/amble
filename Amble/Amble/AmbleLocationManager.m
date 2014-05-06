@@ -66,6 +66,14 @@
 	return (RACSignal*)self.authorizationStatusSubject;
 }
 
+- (RACSignal*)authorizedSignal
+{
+    return [[self currentAuthorizationStatus] filter:^BOOL( NSNumber* statusValue ) {
+        CLAuthorizationStatus status = (CLAuthorizationStatus)[statusValue integerValue];
+        return status ==kCLAuthorizationStatusAuthorized;
+    }];
+}
+
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
 {
 	[self.authorizationStatusSubject sendNext:@(status)];

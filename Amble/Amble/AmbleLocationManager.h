@@ -12,7 +12,9 @@
 @interface AmbleLocationManager : CLLocationManager
 
 - (RACSignal*)currentAuthorizationStatus;
+- (RACSignal*)authorizedSignal;
 - (RACSignal*)currentAuthorizationStatus_humanReadable;
+
 
 - (RACSignal*)currentLocation;
 
