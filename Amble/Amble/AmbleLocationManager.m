@@ -168,5 +168,10 @@
 	}
 }
 
+- (void)locationManager:(CLLocationManager *)manager rangingBeaconsDidFailForRegion:(CLBeaconRegion *)region withError:(NSError *)error
+{
+	NSLog( @"beacon range error: %@", error );
+}
+
 
 @end
