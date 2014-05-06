@@ -15,6 +15,8 @@
 
 @property (nonatomic,strong) NSDate* lastLocationTime;
 
+@property (nonatomic,strong) RACSubject* rangedBeaconSubject;
+
 @end
 
 @implementation AmbleLocationManager
@@ -125,7 +127,6 @@
 	}];
 }
 
-
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray*)locations
 {
 	for( CLLocation* location in locations )
@@ -133,5 +134,31 @@
 		[self.locationSubject sendNext:location];
 	}
 }
+
+
+
+- (RACSubject*)rangedBeaconSubject
+{
+	if( _rangedBeaconSubject == nil )
+	{
+		_rangedBeaconSubject = [RACSubject subject];
+	}
+	return _rangedBeaconSubject;
+}
+
+
+- (RACSignal*)rangedBeaconSignal
+{
+	return (RACSignal*)self.rangedBeaconSubject;
+}
+
+- (void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
+{
+	for( CLBeacon* beacon in beacons )
+	{
+		[self.rangedBeaconSubject sendNext:beacon];
+	}
+}
+
 
 @end

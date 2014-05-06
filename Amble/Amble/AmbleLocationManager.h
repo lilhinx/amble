@@ -8,12 +8,16 @@
 
 #import <CoreLocation/CoreLocation.h>
 
+
 @interface AmbleLocationManager : CLLocationManager
 
 - (RACSignal*)currentAuthorizationStatus;
 - (RACSignal*)currentAuthorizationStatus_humanReadable;
 
 - (RACSignal*)currentLocation;
+
+
+- (RACSignal*)rangedBeaconSignal;
 
 + (instancetype)sharedManager;
 
