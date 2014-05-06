@@ -19,7 +19,6 @@
 - (RACSignal*)currentLocation;
 
 
-- (RACSignal*)rangedBeaconSignal;
 
 + (instancetype)sharedManager;
 

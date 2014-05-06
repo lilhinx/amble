@@ -15,7 +15,7 @@
 
 @property (nonatomic,strong) NSDate* lastLocationTime;
 
-@property (nonatomic,strong) RACSubject* rangedBeaconSubject;
+
 
 @end
 
@@ -145,53 +145,6 @@
 
 
 
-- (RACSubject*)rangedBeaconSubject
-{
-	if( _rangedBeaconSubject == nil )
-	{
-		_rangedBeaconSubject = [RACSubject subject];
-	}
-	return _rangedBeaconSubject;
-}
-
-
-- (RACSignal*)rangedBeaconSignal
-{
-	return (RACSignal*)self.rangedBeaconSubject;
-}
-
-- (void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
-{
-	for( CLBeacon* beacon in beacons )
-	{
-		[self.rangedBeaconSubject sendNext:beacon];
-	}
-}
-
-- (void)locationManager:(CLLocationManager *)manager rangingBeaconsDidFailForRegion:(CLBeaconRegion *)region withError:(NSError *)error
-{
-	NSLog( @"beacon range error: %@", error );
-}
-
-- (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region
-{
-	
-}
-
-- (void)locationManager:(CLLocationManager *)manager didDetermineState:(CLRegionState)state forRegion:(CLRegion *)region
-{
-	
-}
-
-- (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region
-{
-	
-}
-
-- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
-{
-	
-}
 
 
 @end

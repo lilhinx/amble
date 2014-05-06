@@ -11,6 +11,8 @@
 		9C398D0B190324B800839AFE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C398D0A190324B800839AFE /* MapKit.framework */; };
 		9C398D0E1903292800839AFE /* MKMapView+RACSignalSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C398D0D1903292800839AFE /* MKMapView+RACSignalSupport.m */; };
 		9C398D1619032B9600839AFE /* EXTRuntimeExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C398D1319032B9600839AFE /* EXTRuntimeExtensions.m */; };
+		9C71E2C019196B1D00A6B652 /* AmbleBeaconLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C71E2BF19196B1D00A6B652 /* AmbleBeaconLocationManager.m */; };
+		9C71E2C319196B6400A6B652 /* AmbleRegionalLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C71E2C219196B6400A6B652 /* AmbleRegionalLocationManager.m */; };
 		9C9794C118BECB4A00E8C685 /* Amble+Ambulation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C9794C018BECB4A00E8C685 /* Amble+Ambulation.m */; };
 		9C9794C318BECC6500E8C685 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C9794C218BECC6500E8C685 /* CoreMotion.framework */; };
 		9CB68E5618BEBEA500E4F571 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CB68E5518BEBEA500E4F571 /* Foundation.framework */; };
@@ -60,6 +62,10 @@
 		9C398D1319032B9600839AFE /* EXTRuntimeExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTRuntimeExtensions.m; sourceTree = "<group>"; };
 		9C398D1419032B9600839AFE /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTScope.h; sourceTree = "<group>"; };
 		9C398D1519032B9600839AFE /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
+		9C71E2BE19196B1D00A6B652 /* AmbleBeaconLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmbleBeaconLocationManager.h; sourceTree = "<group>"; };
+		9C71E2BF19196B1D00A6B652 /* AmbleBeaconLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmbleBeaconLocationManager.m; sourceTree = "<group>"; };
+		9C71E2C119196B6400A6B652 /* AmbleRegionalLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AmbleRegionalLocationManager.h; sourceTree = "<group>"; };
+		9C71E2C219196B6400A6B652 /* AmbleRegionalLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AmbleRegionalLocationManager.m; sourceTree = "<group>"; };
 		9C9794BF18BECB4A00E8C685 /* Amble+Ambulation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Amble+Ambulation.h"; sourceTree = "<group>"; };
 		9C9794C018BECB4A00E8C685 /* Amble+Ambulation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Amble+Ambulation.m"; sourceTree = "<group>"; };
 		9C9794C218BECC6500E8C685 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
@@ -173,6 +179,10 @@
 				9C398D0D1903292800839AFE /* MKMapView+RACSignalSupport.m */,
 				9CBCE8231908280900ADAC09 /* AmbleLocationManager.h */,
 				9CBCE8241908280900ADAC09 /* AmbleLocationManager.m */,
+				9C71E2BE19196B1D00A6B652 /* AmbleBeaconLocationManager.h */,
+				9C71E2BF19196B1D00A6B652 /* AmbleBeaconLocationManager.m */,
+				9C71E2C119196B6400A6B652 /* AmbleRegionalLocationManager.h */,
+				9C71E2C219196B6400A6B652 /* AmbleRegionalLocationManager.m */,
 			);
 			path = Amble;
 			sourceTree = "<group>";
@@ -287,9 +297,11 @@
 				9C398D0E1903292800839AFE /* MKMapView+RACSignalSupport.m in Sources */,
 				9C398D1619032B9600839AFE /* EXTRuntimeExtensions.m in Sources */,
 				9CB68E5D18BEBEA500E4F571 /* Amble.m in Sources */,
+				9C71E2C019196B1D00A6B652 /* AmbleBeaconLocationManager.m in Sources */,
 				9C398D06190321A000839AFE /* AmbleCartographicNameProvider.m in Sources */,
 				9C9794C118BECB4A00E8C685 /* Amble+Ambulation.m in Sources */,
 				9CBCE8251908280900ADAC09 /* AmbleLocationManager.m in Sources */,
+				9C71E2C319196B6400A6B652 /* AmbleRegionalLocationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
