@@ -27,11 +27,19 @@
 			CLRegionState state = (CLRegionState)[[regionStateTuple objectAtIndex:0] integerValue];
 			id region = [regionStateTuple objectAtIndex:1];
 			BOOL isBeaconRegion = [region isKindOfClass:[CLBeaconRegion class]];
-			if( state == CLRegionStateInside && isBeaconRegion && [weakSelf autoRangeBeacons] )
+			if( isBeaconRegion )
 			{
 				CLBeaconRegion* beaconRegion = (CLBeaconRegion*)region;
-				[self startRangingBeaconsInRegion:beaconRegion];
+				if( state == CLRegionStateInside && [weakSelf autoRangeBeacons] )
+				{
+					[self startRangingBeaconsInRegion:beaconRegion];
+				}
+				else if( state == CLRegionStateOutside && [weakSelf autoRangeBeacons] )
+				{
+					[self stopRangingBeaconsInRegion:beaconRegion];
+				}
 			}
+			
 		}];
 	}
 	return self;
