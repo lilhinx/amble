@@ -173,5 +173,25 @@
 	NSLog( @"beacon range error: %@", error );
 }
 
+- (void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region
+{
+	
+}
+
+- (void)locationManager:(CLLocationManager *)manager didDetermineState:(CLRegionState)state forRegion:(CLRegion *)region
+{
+	
+}
+
+- (void)locationManager:(CLLocationManager *)manager didExitRegion:(CLRegion *)region
+{
+	
+}
+
+- (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
+{
+	
+}
+
 
 @end
