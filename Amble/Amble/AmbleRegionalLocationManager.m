@@ -22,7 +22,7 @@
 {
 	if( _regionEnteredSubject == nil )
 	{
-		_regionEnteredSubject = [RACSubject subject];
+		_regionEnteredSubject =  [RACBehaviorSubject behaviorSubjectWithDefaultValue:nil];
 	}
 	return _regionEnteredSubject;
 }
@@ -36,7 +36,7 @@
 {
 	if( _regionExitedSubject == nil )
 	{
-		_regionExitedSubject = [RACSubject subject];
+		_regionExitedSubject =  [RACBehaviorSubject behaviorSubjectWithDefaultValue:nil];
 	}
 	return _regionExitedSubject;
 }
@@ -50,7 +50,7 @@
 {
 	if( _regionStateChangedSubject == nil )
 	{
-		_regionStateChangedSubject = [RACSubject subject];
+		_regionStateChangedSubject = [RACBehaviorSubject behaviorSubjectWithDefaultValue:nil];
 	}
 	return _regionStateChangedSubject;
 }
